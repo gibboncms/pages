@@ -21,8 +21,6 @@ class Pages
             new FileCache($directory . '/.cache'),
             new PageFactory
         );
-
-        $this->build();
     }
 
     /**
