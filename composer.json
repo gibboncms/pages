@@ -1,6 +1,6 @@
 {
-    "name": "gibboncms/blog",
-    "description": "Simple blogging system built on GibbonCms",
+    "name": "gibboncms/pages",
+    "description": "Pages module for GibbonCms",
     "license": "MIT",
     "authors": [
         {
@@ -22,8 +22,6 @@
         }
     },
     "require": {
-        "gibboncms/gibbon": "dev-master",
-        "symfony/yaml": "~2.6",
-        "league/commonmark": "0.8.*"
+        "gibboncms/gibbon": "dev-master"
     }
 }
