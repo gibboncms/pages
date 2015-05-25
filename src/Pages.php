@@ -2,9 +2,10 @@
 
 use GibbonCms\Gibbon\Filesystems\FileCache;
 use GibbonCms\Gibbon\Filesystems\PlainFilesystem;
+use GibbonCms\Gibbon\Modules\Module;
 use GibbonCms\Gibbon\Repositories\FileRepository;
 
-class Pages
+class Pages implements Module
 {
     /**
      * @var \GibbonCms\Gibbon\Repository
@@ -43,7 +44,7 @@ class Pages
     /**
      * @return void
      */
-    public function build()
+    public function setUp()
     {
         $this->repository->build();
     }

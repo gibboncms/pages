@@ -8,7 +8,7 @@ class PagesTest extends TestCase
     function setUp()
     {
         $this->pages = new Pages($this->fixtures . '/pages');
-        $this->pages->build();
+        $this->pages->setUp();
     }
 
     /** @test */
