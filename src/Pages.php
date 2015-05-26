@@ -5,7 +5,6 @@ namespace GibbonCms\Pages;
 use GibbonCms\Gibbon\Filesystems\FileCache;
 use GibbonCms\Gibbon\Filesystems\Filesystem;
 use GibbonCms\Gibbon\Modules\Module;
-use GibbonCms\Gibbon\Repositories\FileRepository;
 
 class Pages implements Module
 {

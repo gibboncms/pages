@@ -31,6 +31,12 @@ class PagesTest extends TestCase
         $this->assertInstanceOf(Page::class, $this->pages->find('dummy'));
     }
 
+    /** @test */
+    function it_gets_a_subpage()
+    {
+        $this->assertInstanceOf(Page::class, $this->pages->find('subpages/subpage'));
+    }
+
     /** @tes */
     function it_gets_all_pages()
     {
