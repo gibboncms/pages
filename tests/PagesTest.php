@@ -4,12 +4,18 @@ namespace GibbonCms\Pages\Test;
 
 use GibbonCms\Pages\Pages;
 use GibbonCms\Pages\Page;
+use GibbonCms\Gibbon\Filesystems\PlainFilesystem;
+use GibbonCms\Gibbon\Filesystems\FileCache;
 
 class PagesTest extends TestCase
 {
     function setUp()
     {
-        $this->pages = new Pages($this->fixtures . '/pages');
+        $this->pages = new Pages(
+            new PlainFilesystem($this->fixtures.'/pages'),
+            new FileCache($this->fixtures.'/pages/.cache')
+        );
+
         $this->pages->setUp();
     }
 
