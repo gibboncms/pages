@@ -13,7 +13,7 @@ class PageFactory implements Factory
      * Transform raw data to an entity
      * 
      * @param array $data
-     * @return \GibbonCms\Blog\Post
+     * @return \GibbonCms\Pages\Page
      */
     public function make($data)
     {
