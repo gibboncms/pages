@@ -1,4 +1,6 @@
-<?php namespace GibbonCms\Pages;
+<?php
+
+namespace GibbonCms\Pages;
 
 use GibbonCms\Gibbon\Entities\Entity;
 

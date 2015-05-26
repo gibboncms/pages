@@ -1,4 +1,6 @@
-<?php namespace GibbonCms\Pages\Tests;
+<?php
+
+namespace GibbonCms\Pages\Test;
 
 use PHPUnit_Framework_TestCase;
 
