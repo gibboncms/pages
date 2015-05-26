@@ -30,7 +30,7 @@ class PageFactoryTest extends TestCase
         $this->assertEquals('dummy', $page->getIdentifier());
         $this->assertEquals('Dummy', $page->title);
         $this->assertRegexp('/## Hello world/', $page->body);
-        $this->assertRegexp('/<h2>Hello world<\/h2>/', $page->getRenderedBody());
+        $this->assertRegexp('/<h2>Hello world<\/h2>/', $page->render());
     }
 
     /** @test */
