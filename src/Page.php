@@ -12,6 +12,11 @@ class Page extends Entity
     public $title;
 
     /**
+     * @var array
+     */
+    public $data;
+
+    /**
      * @var string
      */
     public $body;

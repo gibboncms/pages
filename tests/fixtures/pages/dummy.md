@@ -1,4 +1,6 @@
 title: Dummy
+data:
+  meta_description: Hello world from gibbon
 
 ===
 

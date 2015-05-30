@@ -29,20 +29,8 @@ class PageFactoryTest extends TestCase
         $this->assertInstanceOf(Page::class, $page);
         $this->assertEquals('dummy', $page->getIdentifier());
         $this->assertEquals('Dummy', $page->title);
+        $this->assertEquals('Hello world from gibbon', $page->data['meta_description']);
         $this->assertRegexp('/## Hello world/', $page->body);
         $this->assertRegexp('/<h2>Hello world<\/h2>/', $page->render());
-    }
-
-    /** @test */
-    function it_encodes_an_entity()
-    {
-        $page = $this->factory->make([
-            'id' => 'dummy',
-            'data' => file_get_contents($this->fixtures . '/pages/dummy.md'),
-        ]);
-
-        $raw = $this->factory->encode($page);
-
-        $this->assertEquals(file_get_contents($this->fixtures . '/pages/dummy.md'), $raw);
     }
 }

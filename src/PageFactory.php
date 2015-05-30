@@ -22,9 +22,10 @@ class PageFactory implements Factory
         $meta = self::parseYaml($parts['meta']);
 
         return $this->createAndFill([
-            'id'                => $data['id'],
-            'title'             => $meta['title'],
-            'body'              => $parts['body'],
+            'id'    => $data['id'],
+            'title' => $meta['title'],
+            'data'  => isset($meta['data']) ? $meta['data'] : [],
+            'body'  => $parts['body'],
         ]);
     }
 
