@@ -20,12 +20,4 @@ class Page extends Entity
      * @var string
      */
     public $body;
-
-    /**
-     * @return string
-     */
-    public function render()
-    {
-        return PageFactory::parseMarkdown($this->body);
-    }
 }

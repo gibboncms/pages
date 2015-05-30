@@ -31,6 +31,5 @@ class PageFactoryTest extends TestCase
         $this->assertEquals('Dummy', $page->title);
         $this->assertEquals('Hello world from gibbon', $page->data['meta_description']);
         $this->assertRegexp('/## Hello world/', $page->body);
-        $this->assertRegexp('/<h2>Hello world<\/h2>/', $page->render());
     }
 }
