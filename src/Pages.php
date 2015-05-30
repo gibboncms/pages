@@ -10,12 +10,13 @@ use GibbonCms\Gibbon\Repositories\FileRepository;
 class Pages implements Module
 {
     /**
-     * @var \GibbonCms\Gibbon\Repository
+     * @var \GibbonCms\Gibbon\Repositories\Repository
      */
     protected $repository;
 
     /**
      * @param  \GibbonCms\Gibbon\Filesystems\Filesystem $filesystem
+     * @param  string $directory
      * @param  \GibbonCms\Gibbon\Filesystems\FileCache $fileCache
      */
     public function __construct(Filesystem $filesystem, $directory, FileCache $fileCache)
@@ -30,7 +31,7 @@ class Pages implements Module
     }
 
     /**
-     * @param string $id
+     * @param  string $id
      * @return \GibbonCms\Pages\Page
      */
     public function find($id)
