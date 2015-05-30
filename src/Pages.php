@@ -5,6 +5,7 @@ namespace GibbonCms\Pages;
 use GibbonCms\Gibbon\Filesystems\FileCache;
 use GibbonCms\Gibbon\Filesystems\Filesystem;
 use GibbonCms\Gibbon\Modules\Module;
+use GibbonCms\Gibbon\Repositories\FileRepository;
 
 class Pages implements Module
 {
@@ -17,9 +18,15 @@ class Pages implements Module
      * @param  \GibbonCms\Gibbon\Filesystems\Filesystem $filesystem
      * @param  \GibbonCms\Gibbon\Filesystems\FileCache $fileCache
      */
-    public function __construct(Filesystem $filesystem, FileCache $fileCache)
+    public function __construct(Filesystem $filesystem, $directory, FileCache $fileCache)
     {
-        $this->repository = new FileRepository($filesystem, $fileCache, new PageFactory);
+        $this->repository = new FileRepository(
+            $filesystem,
+            $directory,
+            $fileCache,
+            new PageFactory,
+            true
+        );
     }
 
     /**

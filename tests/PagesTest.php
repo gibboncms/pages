@@ -12,7 +12,8 @@ class PagesTest extends TestCase
     function setUp()
     {
         $this->pages = new Pages(
-            new PlainFilesystem($this->fixtures.'/pages'),
+            new PlainFilesystem($this->fixtures),
+            'pages',
             new FileCache($this->fixtures.'/pages/.cache')
         );
 
@@ -37,9 +38,10 @@ class PagesTest extends TestCase
         $this->assertInstanceOf(Page::class, $this->pages->find('subpages/subpage'));
     }
 
-    /** @tes */
+    /** @test */
     function it_gets_all_pages()
     {
-        $this->assertCount(1, $this->pages->getAll());
+        $this->assertCount(2, $this->pages->getAll());
+        $this->assertContainsOnlyInstancesOf(Page::class, $this->pages->getAll());
     }
 }
