@@ -22,6 +22,6 @@
         }
     },
     "require": {
-        "gibboncms/gibbon": "~0.1"
+        "gibboncms/gibbon": "^0.5"
     }
 }
