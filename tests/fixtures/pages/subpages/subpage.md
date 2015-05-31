@@ -1,6 +1,6 @@
 title: Subpage
 
-===
+---
 
 ## Hello world
 
