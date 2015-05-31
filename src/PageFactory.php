@@ -30,25 +30,6 @@ class PageFactory implements Factory
     }
 
     /**
-     * Transform a page to raw data
-     * 
-     * @param \GibbonCms\Pages\Page $page
-     * @return string
-     */
-    public function encode($page)
-    {
-        $contents = ''
-            . $this->dumpToSimpleYaml([
-                'title' => $page->title,
-            ])
-            . $this->getDataSeparator()
-            . $page->body
-        ;
-
-        return $contents;
-    }
-
-    /**
      * Return the classname of the entity this factory makes
      * 
      * @return string
